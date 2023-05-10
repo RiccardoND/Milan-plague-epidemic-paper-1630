@@ -11,8 +11,8 @@
 library(tidyverse)
 
 #load table and prepare data for analysis
-df <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df, rep, df$count))
 df3 <- df2 %>%  select(-count)
@@ -69,8 +69,8 @@ library(gplots)
 library(reshape2)
 
 #load tabels and prepare data for analysis
-df <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df, rep, df$count))
 df3 <- df2 %>%  select(-count)
@@ -120,8 +120,8 @@ dev.off()
 library(tidyverse)
 
 #load tables and prepare data for analysis
-df1 <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df1 <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df1, rep, df1$count))
 df3 <- df2 %>%  select(-count)
@@ -177,8 +177,8 @@ library(ggpubr)
 library(patchwork)
 
 #load table and prepara data for analysis
-df <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df, rep, df$count))
 df3 <- df2 %>%  select(-count)
@@ -416,8 +416,8 @@ library(tidyverse)
 library(patchwork)
 
 #load table and prepara data for analysis
-df <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df, rep, df$count))
 df3 <- df2 %>%  select(-count)
@@ -482,8 +482,8 @@ library(ggpubr)
 
 
 #Produce summary table
-df <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df, rep, df$count))
 df3 <- df2 %>%  select(-count)
@@ -593,8 +593,8 @@ library(ggpubr)
 #################
 #################
 #load table and prepara data for analysis
-df <- read.csv("Table_Galli_etal.csv", na.strings = "NA")
-gps <- read.csv("Parishes_gps.csv", na.strings = "NA")
+df <- read.csv("TableS1.csv", na.strings = "NA")
+gps <- read.csv("TableS2.csv", na.strings = "NA")
 
 df2 <- data.frame(lapply(df, rep, df$count))
 df3 <- df2 %>%  select(-count)
@@ -606,7 +606,7 @@ tab_cluster <- left_join(tab, clusters, by = "Parish")
 tab_cluster <- droplevels(subset(tab_cluster, !is.na(tab_cluster$Cluster)))
 
 
-tab_dist <- read.delim("Centroid_distance.tab")
+tab_dist <- read.delim("TableS3.tab")
 row.names(tab_dist) <- tab_dist$Parish
 
 tab_cluster_dist <- left_join(tab_cluster, tab_dist, by = "Parish")
