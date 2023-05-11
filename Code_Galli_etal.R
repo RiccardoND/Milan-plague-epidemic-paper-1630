@@ -240,7 +240,7 @@ pca <- cmdscale(dist)
 
 
 #silhouette optimal number of clusters
-pdf("Clustering_parrocchie_min_30_morti_peste.silhouette.pdf")
+pdf("Clustering_parrocchie_min_21_morti_peste.silhouette.pdf")
 fviz_nbclust(peste_cum_norm_ren_sel_2, kmeans, method = "silhouette", k.max=10)
 dev.off()
 
