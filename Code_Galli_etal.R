@@ -523,6 +523,10 @@ colors_palette <- unique(peste_clus_gps[,"Cluster"])
 
 map <- readPNG("crop_Mappa_blu_60.pdf.png")
 
+#uncomment below to have different design in the background map. 
+#WARNING: the final map will be ovewritten if you run again.
+#map <- readPNG("positron_darker_2023.pdf.png")
+#map <- readPNG("satellite_2023.pdf.png")
 #Coordinates needed to crop the figure (obtained from QGIS analysis)
 gps_map <-data.frame(X = c(9.145413, 9.228967),
                      Y = c(45.43978, 45.49275),
