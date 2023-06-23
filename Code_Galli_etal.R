@@ -342,7 +342,7 @@ all_tab$Inflection_date <- as.Date(all_tab$Inflection_date )
 all_tab2 <- melt(all_tab,  id.vars = c("Parish", "Cluster"))
 
 ###
-write.csv(all_tab2, file = "Intermediate_table/all_tab2.csv", row.names = F)
+write.csv(all_tab2, file = "all_tab2.csv", row.names = F)
 ###
 
 all_tab2$Cluster <- factor(all_tab2$Cluster, levels = c("1","2"), ordered = TRUE)
